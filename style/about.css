@@ -30,35 +30,39 @@ body {
 */
 .container {  display: grid;
     grid-template-columns: 0.2fr 1fr 0.2fr 1fr 0.2fr;
-    grid-template-rows: 0.3fr 0.2fr 1fr 1fr 0.3fr;
-    gap: 100px 0px;
+    grid-template-rows: 0.3fr 0.2fr 1fr 0.2fr 1fr 0.3fr;
+    gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "navigation navigation navigation navigation navigation"
       ". . . . ."
       ". text1 . video ."
+      ". . . . ."
       ". text2 . cv ."
       ". . . . .";
   }
   
   .text1 { 
     grid-area: text1; 
-    background-color: red;
+    /* background-color: red; */
   }
   
   .text2 { 
     grid-area: text2; 
-    background-color: rgb(64, 255, 0);
+    /* background-color: green; */
   }
   
   .video { 
     grid-area: video; 
-    background-color: rgb(0, 13, 255);
+    /* background-color: blue; */
+    display:  flex;
   }
   
   .cv {
     grid-area: cv; 
-    background-color: rgb(255, 0, 251);
+    margin-top: 2em;
+    /* background-color: yellow; */
+    position: relative;
   }
   
   .navigation { 
@@ -96,3 +100,68 @@ body {
     color: rgb(255, 255, 255);
   }
 
+  /*
+=========================
+        Info
+=========================
+*/
+
+.text1 h1, .text2 h1{
+    color: white;
+    font-size: 50px;
+    font-family: 'Archivo Black', sans-serif;
+    margin-top: 0;
+}
+
+
+.text1 p, .text2 p {
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.embed {
+    width: 100%;
+    border: 2px solid white;
+    box-shadow: 0 0 20px 2px #fff;
+    border-radius: 10px;
+    display: block;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.cv h2{
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+    /*
+=========================
+        Button
+=========================
+*/
+
+.btn {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: #5C8374;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 26px;
+    font-family: 'Archivo Black', sans-serif;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background-color: #183D3D;
+    transition: ease-in-out 0.3s;
+  }
