@@ -1,0 +1,100 @@
+/*
+=========================
+        Fonts
+=========================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+/* font-family: 'Archivo Black', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+/*
+=========================
+        Body
+=========================
+*/
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #040D12;
+}
+
+  /*
+=========================
+        Navbar
+=========================
+*/
+.navbar {
+    background-color: #183D3D;
+    overflow: hidden;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 0;
+  }
+  
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  .navbar a:hover {
+    color: #989898
+  }
+
+  .navbar a.active {
+    background-color: #5C8374;
+    color: rgb(255, 255, 255);
+  }
+
+ /*
+=========================
+        Form
+=========================
+*/
+  .formdiv
+  {
+      display: block;
+      text-align: center;
+      margin-top: 10%;
+  }
+
+  form
+  {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+  }
+
+  label {
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 24px;
+  }
+
+  ::placeholder{
+    color: rgba(255, 255, 255, 0.15);
+  }
+
+  #naam, #email{
+    color: rgba(255, 255, 255, 0.646);
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 35px;
+    border-radius: 26px;
+    border: none;
+    background-color: #081922;
+    padding: 6px 20px;
+  }
+
