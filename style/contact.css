@@ -62,17 +62,26 @@ body {
 */
   .formdiv
   {
-      display: block;
-      text-align: center;
-      margin-top: 10%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
   }
 
   form
   {
-      display: inline-block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
+        /* border: 2px solid white;
+        border-radius: 20px; */
+    padding: 2em 1em 2em 3em;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
 
   label {
@@ -81,11 +90,17 @@ body {
     font-size: 24px;
   }
 
+  span {
+    color: #C34444;
+}
+
   ::placeholder{
     color: rgba(255, 255, 255, 0.15);
   }
 
+  /*FIELDS*/
   #naam, #email{
+    font-family: 'Roboto', sans-serif;
     color: rgba(255, 255, 255, 0.646);
     font-size: 20px;
     margin-top: 10px;
@@ -97,4 +112,60 @@ body {
     background-color: #081922;
     padding: 6px 20px;
   }
+
+  .half {
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.half label {
+    display: block;
+    margin-bottom: -18px;
+}
+
+#telefoon, #bedrijf {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.646);
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 160px;
+    height: 35px;
+    border-radius: 26px;
+    border: none;
+    background-color: #081922;
+    padding: 6px 20px;
+}
+
+  /*Bericht veld*/
+textarea {
+    min-width: 26em;
+    max-width: 26em;
+    height: 16em;
+    min-height: 4em;
+    max-height: 20em;
+    background-color: #081922;
+    color: rgba(255, 255, 255, 0.646);
+    padding: 12px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: none;
+}
+
+  /*Verstuur knop*/
+#submit {
+    width: 18em;
+    height: 3em;
+    margin-left: 8.2em;
+    margin-top: 2em;
+    display:block;
+
+    background-color: #183D3D;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
 

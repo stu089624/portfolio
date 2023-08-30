@@ -20,21 +20,24 @@
 
     <div class="formdiv">
         <form action="#">
-            <label for="naam">Naam:</label><br>
+            <label id="labelred" for="naam">Naam<span>*</span></label><br>
             <input type="text" id="naam" name="naam" placeholder="John Doe"><br>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
+            <label for="email">Email<span>*</span></label><br>
+            <input type="email" id="email" name="email" placeholder="johndoe@mail.com"><br>
 
+         <div class="half">
             <label for="telefoon">Telefoon:</label><br>
-            <input type="tel" id="telefoon" name="telefoon"><br>
-
+            <input type="tel" id="telefoon" name="telefoon" placeholder="06-12345678"><br>
+            </div>
+        <div class="half">
             <label for="bedrijf">Bedrijf:</label><br>
-            <input type="text" id="bedrijf" name="bedrijf"><br>
-
-            <textarea name="comment" form="usrform">Enter text here...</textarea>
-
-            <input type="submit" value="Submit">
+            <input type="text" id="bedrijf" name="bedrijf" placeholder="MijnBedrijf"><br>
+         </div>
+        <br>
+            <textarea name="bericht" placeholder="Typ u bericht hier..."></textarea>
+         <br>
+            <input type="submit" id="submit" value="Verstuur">
         </form>
 
 
