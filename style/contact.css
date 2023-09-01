@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
   max-width: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #040D12;
 }
 
@@ -174,4 +174,39 @@ textarea {
 .error {
   color: #C34444;
   font-size: 12px;
+}
+
+/*
+=========================
+        @MEDIA
+=========================
+*/
+@media only screen and (max-width: 800px) {
+
+  .formdiv {
+    margin-top: 3em;
+  }
+
+  #naam, 
+  #email {
+    width: 80%;
+  }
+
+  #telefoon,
+  #bedrijf {
+    width: 155%;
+  }
+
+  textarea {
+    min-width: 80%;
+    max-width: 0;
+    height: 5em;
+    min-height: 3em;
+    max-height: 5em;
+  }
+
+  #submit {
+    margin-right: 10.2em;
+  }
+
 }
