@@ -1,69 +1,50 @@
+window.onsubmit = (event) => {
+    event.preventDefault()
+    const form = [] 
+    const validatie = []
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contactForm');
-    const naamInput = document.getElementById('naam');
-    const emailInput = document.getElementById('email');
+    const input = document.querySelectorAll(".input")
+    
+    input.forEach(item => {
+        form.push({ name: item.name, value: item.value });
+    }); 
 
-    form.addEventListener('submit', function (event) {
-        let isValid = true;
+    form.forEach(item => {
+        if (item.value == '' && item.name != "telefoon" && item.name != "bedrijf") {
+            document.getElementById(item.name).style.border = '1px solid #C34444'
+            document.getElementById(`${item.name}Error`).innerText = "verplicht"
+        }  else {
 
-        const naamValue = naamInput.value.trim();
-        if (naamValue === '' || hasNumbers(naamValue) || naamValue.length > 50) {
-            displayError(naamInput, 'Naam is verplicht, mag geen cijfers bevatten, en mag maximaal 50 tekens bevatten');
-            isValid = false;
-        } else {
-            clearError(naamInput);
+            try {
+
+                if (item.name == "bericht" && item.value.length < 20){
+                    document.getElementById(item.name).style.border = '1px solid #C34444'
+                    document.getElementById(`${item.name}Error`).innerText = "moet minimaal 20 karakters bevatten"
+                }
+
+                else if(item.name == "naam" && item.value.length >= 32){
+                    console.log("moet minimaal")
+                    document.getElementById(item.name).style.border = '1px solid #C34444'
+                    document.getElementById(`${item.name}Error`).innerText = "mag maximaal 32 karakters bevatten"
+                }
+
+                else if(item.name == "email" && item.value.length >= 40){
+                    document.getElementById(item.name).style.border = '1px solid #C34444'
+                    document.getElementById(`${item.name}Error`).innerText = "mag maximaal 40 karakters bevatten"
+                }
+                else {
+                    document.getElementById(item.name).style.border = '1px solid #040D12'
+                    document.getElementById(`${item.name}Error`).innerText = ""
+                    validatie.push(item.name)
+                }
+            
+            } catch {}
         }
+    })
 
-        const emailValue = emailInput.value.trim();
-        if (emailValue === '' || !isValidEmail(emailValue) || emailValue.length > 50) {
-            displayError(emailInput, 'Email is verplicht, moet een geldig formaat hebben, en mag maximaal 50 tekens bevatten');
-            isValid = false;
-        } else {
-            clearError(emailInput);
-        }
-
-        if (!isValid) {
-            event.preventDefault();
-        }
-    });
-
-    naamInput.addEventListener('input', function () {
-        const naamValue = naamInput.value.trim();
-        if (hasNumbers(naamValue) || naamValue.length > 50) {
-            displayError(naamInput, 'Naam mag geen cijfers bevatten en mag maximaal 50 tekens bevatten');
-        } else {
-            clearError(naamInput);
-        }
-    });
-
-    emailInput.addEventListener('input', function () {
-        const emailValue = emailInput.value.trim();
-        if (!isValidEmail(emailValue) || emailValue.length > 50) {
-            displayError(emailInput, 'Email moet een geldig formaat hebben en mag maximaal 50 tekens bevatten');
-        } else {
-            clearError(emailInput);
-        }
-    });
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+    if(validatie.length >= 3){
+        input.forEach(input => {
+            input.value = ''
+        })
     }
-
-    function hasNumbers(input) {
-        return /\d/.test(input);
-    }
-
-    function displayError(inputElement, errorMessage) {
-        const errorElement = inputElement.nextElementSibling;
-        errorElement.textContent = errorMessage;
-        inputElement.style.borderColor = 'red';
-    }
-
-    function clearError(inputElement) {
-        const errorElement = inputElement.nextElementSibling;
-        errorElement.textContent = '';
-        inputElement.style.borderColor = '';
-    }
-});
+}

@@ -22,26 +22,28 @@
 
     <div class="formdiv">
         <form action="#" id="contactForm">
-            <label id="labelred" for="naam">Naam<span>*</span></label><br>
-            <input type="text" id="naam" name="naam" placeholder="John Doe"><br>
-            <span class="error" id="naamError"></span>
+            <label id="labelred" for="naam">Naam<span>* </span><span class="error" id="naamError"></span></label><br>
+            <input class="input" type="text" id="naam" name="naam" placeholder="John Doe"><br>
 
-            <label for="email">Email<span>*</span></label><br>
-            <input type="email" id="email" name="email" placeholder="johndoe@mail.com"><br>
-            <span class="error" id="emailError"></span>
+
+            <label for="email">Email<span>* </span><span class="error" id="emailError"></span></label><br>
+            <input class="input" type="email" id="email" name="email" placeholder="johndoe@mail.com"><br>
+    
 
             <div class="half">
                 <label for="telefoon">Telefoon:</label><br>
-                <input type="tel" id="telefoon" name="telefoon" placeholder="06-12345678"><br>
+                <input class="input" type="tel"  pattern="06-\d{8}" id="telefoon" name="telefoon" placeholder="06-12345678"><br>
+                <!-- value="06-"" -->
             </div>
             <div class="half">
                 <label for="bedrijf">Bedrijf:</label><br>
-                <input type="text" id="bedrijf" name="bedrijf" placeholder="MijnBedrijf"><br>
+                <input class="input" type="text" id="bedrijf" name="bedrijf" placeholder="MijnBedrijf"><br>
             </div>
             <br>
-            <textarea name="bericht" placeholder="Typ uw bericht hier..."></textarea>
+            <label for="bericht">Bericht:<span>* </span> <span class="error" id="berichtError"></span></label><br>
+            <textarea class="input" id="bericht" name="bericht" placeholder="Typ uw bericht hier..."></textarea>
             <br>
-            <input type="submit" id="submit" value="Verstuur">
+            <button type="submit" id="submit">Verstuur</button>
         </form>
 
 

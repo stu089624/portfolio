@@ -88,9 +88,10 @@ label {
   font-size: 24px;
 }
 
-span {
+label span {
   color: #C34444;
 }
+
 
 ::placeholder {
   color: rgba(255, 255, 255, 0.15);
@@ -107,10 +108,9 @@ span {
   width: 400px;
   height: 35px;
   border-radius: 26px;
-  border: none;
   background-color: #081922;
   padding: 6px 20px;
-  border: 2px solid #040D12;
+  border: 1px solid #040D12;
 }
 
 .half {
@@ -133,25 +133,26 @@ span {
   width: 160px;
   height: 35px;
   border-radius: 26px;
-  border: none;
+  border: 1px solid #040D12;
   background-color: #081922;
   padding: 6px 20px;
 }
 
 /*Bericht veld*/
 textarea {
+  margin-top: 0.6em;
   min-width: 26em;
   max-width: 26em;
-  height: 16em;
+  height: 10em;
   min-height: 4em;
-  max-height: 20em;
+  max-height: 11em;
   background-color: #081922;
   color: rgba(255, 255, 255, 0.646);
   padding: 12px;
   border-radius: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  border: none;
+  border: 1px solid #040D12;
 }
 
 /*Verstuur knop*/
@@ -170,8 +171,7 @@ textarea {
   cursor: pointer;
 }
 
-.error-message {
+.error {
   color: #C34444;
   font-size: 12px;
-  margin-top: 5px;
 }
