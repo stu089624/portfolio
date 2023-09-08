@@ -1,0 +1,145 @@
+/*
+=========================
+        Fonts
+=========================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+/* font-family: 'Archivo Black', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+/*
+=========================
+        Body
+=========================
+*/
+
+body {
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    background-color: #040D12;
+}
+
+/*
+=========================
+        Navbar
+=========================
+*/
+.navbar {
+    background-color: #183D3D;
+    overflow: hidden;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 0;
+}
+
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    color: #989898
+}
+
+.navbar a.active {
+    background-color: #5C8374;
+    color: rgb(255, 255, 255);
+}
+
+
+/*
+=========================
+         Cards
+=========================
+*/
+.kaarten-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.kaart {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 15px 30px;
+    width: 350px;
+    height: 400px;
+    display: inline-block;
+    background-color: #081922;
+    text-align: center;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+
+.kaart img {
+    max-width: 320px;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.kaart-titel {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-family: 'Archivo Black', sans-serif;
+    margin-bottom: 10px;
+}
+
+.kaart-beschrijving {
+    font-size: 1rem;
+    margin-top: 15px;
+    color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.kaart-datum {
+    font-size: 0.9rem;
+    color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    bottom: 3px;
+    right: 6px;
+    text-align: right;
+}
+
+.kaart:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 3em;
+}
+
+/*
+=========================
+        Add button
+=========================
+*/
+
+#codeButton {
+    cursor: pointer;
+    color: #5C8374;
+    transition-duration: 0.3s;
+}
+
+#codeButton:hover {
+    color: #f2f2f2;
+}
